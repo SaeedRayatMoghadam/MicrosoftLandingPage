@@ -1,0 +1,267 @@
+@font-face {
+  font-family: "FredokaOne";
+  src: url("./fonts/FredokaOne-Regular.ttf") format("truetype");
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  background-color: #fff;
+  line-height: 1.5;
+  font-size: 15px;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+  max-width: 1100px;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  padding: 10px;
+  font-size: 13px;
+  height: 60px;
+}
+
+.nav .logo {
+  width: 110px;
+}
+
+.nav ul.menu {
+  list-style: none;
+  display: flex;
+}
+
+.nav ul.menu li {
+  padding: 5px 20px;
+}
+
+.nav ul.menu li a {
+  padding-bottom: 2px;
+  transition: 0.3s ease;
+}
+
+.nav ul.menu li a:hover {
+  padding-bottom: 2px;
+  transition: 0.3s ease;
+  border-bottom: 1px solid #000;
+}
+
+.nav ul.menu li a:hover ~ .nav ul.menu li {
+  background: rgba(0, 0, 0, 1);
+}
+
+.btn {
+  display: inline-block;
+  background-color: #000;
+  border: none;
+  padding: 10px 30px;
+  font-weight: bold;
+  color: #fff;
+  transition: 0.3s ease;
+}
+
+.btn:hover {
+  opacity: 0.9;
+  transition: 0.3s ease;
+}
+header {
+  width: 100%;
+  height: 400px;
+  background: url("./image/slide1.png") no-repeat center center/cover;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  padding-bottom: 50px;
+  margin-bottom: 50px;
+}
+
+header h2,
+p {
+  margin-bottom: 15px;
+}
+
+.cards-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.card img {
+  width: 100%;
+}
+
+.card p {
+  color: #262626;
+  padding-top: 5px;
+}
+
+.card a {
+  text-transform: uppercase;
+  color: #0067b6;
+  font-weight: bold;
+}
+
+.xbox {
+  width: 100%;
+  height: 300px;
+  background: url("image/xbox.png") no-repeat center center/cover;
+  margin-bottom: 20px;
+}
+
+.xbox .content {
+  width: 45%;
+  padding: 50px 0 0 30px;
+}
+
+.xbox .content p {
+  color: #262626;
+  padding: 15px 0 10px 0;
+}
+
+.banner {
+  width: 100%;
+  height: 300px;
+  background: url("image/carbon.jpg") no-repeat center center/cover;
+  margin-bottom: 20px;
+}
+
+.banner .content {
+  width: 40%;
+  padding: 50px 0 0 30px;
+  color: #fff;
+}
+
+.banner .content p {
+  color: #eee;
+  padding: 15px 0 10px 0;
+}
+
+.banner .content .btn {
+  background-color: #fff !important;
+  color: #000;
+}
+
+.socials {
+  display: flex;
+  align-items: center;
+  justify-self: flex-start;
+  margin: 30px 0 30px;
+}
+.socials * {
+  margin-right: 8px;
+}
+
+.socials a {
+  margin-bottom: 3px;
+}
+
+.footer-links {
+  width: 100%;
+  background-color: #f2f2f2;
+  color: #616161;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: flex-start;
+  text-align: center;
+  gap: 20px;
+  padding-top: 20px;
+}
+
+.footer-links h3 {
+  color: #262626;
+}
+
+.footer-links ul li {
+  line-height: 2.8;
+}
+
+footer {
+  width: 100%;
+  background-color: #f2f2f2;
+  padding-top: 20px;
+}
+footer .content {
+  width: 82%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  margin: auto;
+}
+
+footer ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+footer ul li {
+  padding: 10px;
+  color: #616161;
+}
+
+@media screen and (max-width: 778px) {
+  .cards-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  footer ul {
+    justify-content: end;
+  }
+
+  .footer-links {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .nav ul.menu {
+    display: none;
+  }
+  header p {
+    width: 60%;
+    text-align: center;
+  }
+
+  .xbox .content {
+    width: 60%;
+  }
+
+  .banner .content {
+    width: 60%;
+  }
+
+  .cards-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  footer ul {
+    justify-content: start;
+  }
+  footer .content {
+    flex-direction: column;
+    justify-content: start;
+  }
+
+  .footer-links {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
